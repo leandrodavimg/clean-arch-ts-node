@@ -10,7 +10,7 @@ export class CreateUserUseCase {
     private mailProvider: IMailProvider
   ) { }
 
-  async handle(data: ICreateUserRequestDTO) {
+  async execute(data: ICreateUserRequestDTO) {
     const userAlreadyExists = await this.usersRepository.findByEmail(data.email)
 
     if (userAlreadyExists) {

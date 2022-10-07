@@ -23,8 +23,8 @@ export class CreateUserUseCase {
 
     await this.mailProvider.sendMail({
       to: {
-        name: 'Leandro',
-        email: 'leandrodavimg@gmail.com'
+        name: data.name,
+        email: data.email
       },
       from: {
         name: 'Leandro',

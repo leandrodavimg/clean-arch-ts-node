@@ -4,7 +4,7 @@
 
 <p align="center">
  <a href="#Features">Features</a> •
- <a href="#Prerequisites">Prerequisites</a> • 
+ <a href="#Requirements">Requirements</a> • 
  <a href="#Technologies">Technologies</a> • 
  <a href="#Architecture">Architecture</a> • 
  <!-- <a href="#licenc-a">Licença</a> •  -->
@@ -19,7 +19,7 @@
 - 🔲 Login User
 - 🔲 Log out
 
-## Prerequisites
+## Requirements
 
 Before starting, you must ve installed.
 
@@ -31,11 +31,11 @@ Before starting, you must ve installed.
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-- [Expo](https://expo.io/)
 - [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
+- Express
+- Mongoose
+- Nodemailer
 
 # Architecture
 

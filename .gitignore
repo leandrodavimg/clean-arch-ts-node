@@ -2,5 +2,6 @@
 /lib
 
 *.lock
-readme.md
+# readme.md
+sample.md
 .env

@@ -1,5 +1,5 @@
 import { SendMailMailtrap } from "../../infra/providers/mailtrap/send-mail-mailtrap";
-import { PostgresFake } from "../../infra/repositories/postgress-fake/postgress-fake";
+import { PostgresFake } from "../../infra/repositories/memo-db/user";
 import { CreateuserController } from "./create-user-controller";
 import { CreateUserUseCase } from "./create-user-use-case";
 

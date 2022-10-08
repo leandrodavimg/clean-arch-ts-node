@@ -10,29 +10,33 @@ export class CreateUserUseCase {
     private mailProvider: IMailProvider
   ) { }
 
-  async execute(data: ICreateUserRequestDTO) {
+  async execute(data: ICreateUserRequestDTO): Promise<User> {
     const userAlreadyExists = await this.usersRepository.findByEmail(data.email)
 
     if (userAlreadyExists) {
       throw new Error('User already exists.')
     }
 
+    // Encripta o password
+
+    // Instancia o novo usuário
     const user = new User(data)
 
-    await this.usersRepository.save(user)
+    // Grava o usuário no banco de dados
+    const userData = await this.usersRepository.save(user)
 
-    await this.mailProvider.sendMail({
-      to: {
-        name: data.name,
-        email: data.email
-      },
-      from: {
-        name: 'Leandro',
-        email: 'leandrodavimg@gmail.com'
-      },
-      subject: 'Teste de titulo',
-      html: '<p>Isso é um teste de mensagem para enviar e-mail</p>'
-    })
-
+    // await this.mailProvider.sendMail({
+    //   to: {
+    //     name: data.name,
+    //     email: data.email
+    //   },
+    //   from: {
+    //     name: 'Leandro',
+    //     email: 'leandrodavimg@gmail.com'
+    //   },
+    //   subject: 'Teste de titulo',
+    //   html: '<p>Isso é um teste de mensagem para enviar e-mail</p>'
+    // })
+    return userData
   }
 }

@@ -11,7 +11,9 @@ export class PostgresFake implements IUserRepository {
     return user
   }
 
-  async save(user: User): Promise<void> {
+  async save(user: User): Promise<User> {
     this.users.push(user)
+    user.name = `${user.name} teste`
+    return user
   }
 }

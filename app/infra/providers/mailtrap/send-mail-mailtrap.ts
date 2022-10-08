@@ -23,11 +23,11 @@ export class SendMailMailtrap implements IMailProvider {
         address: message.to.email
       },
       from: {
-        name: message.to.name,
-        address: message.to.email
+        name: 'Nome da empresa',
+        address: 'email@email.com.br'
       },
-      subject: message.subject,
-      html: message.html
+      subject: `Email: ${message.type}`,
+      html: `Olá ${message.to.name}, seja bem vindo! <b>${message.type}</b>`
       })
   }
 }

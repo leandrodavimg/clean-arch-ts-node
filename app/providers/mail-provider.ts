@@ -3,11 +3,11 @@ interface IAddress {
   name: string
 }
 
+type ITypeMail = 'welcome' | 'recoveryPassword' 
+
 export interface IMessage {
   to: IAddress
-  from: IAddress
-  subject: string
-  html: string
+  type: ITypeMail
 }
 
 export interface IMailProvider {

@@ -13,19 +13,24 @@
 
 ### Features
 
+- ✅ Using the in-memory database 💾
+- ✅ Using MongoDb with mongoose
 - ✅ Create a new user
 - ✅ Find user by email
 - ✅ Send mailtrap (smtp)
 - 🔲 Login User
 - 🔲 Log out
+- 🔲 Using TypeORM (MYSQL or POSTGRE)
 
 ## Requirements
 
-Before starting, you must ve installed.
+Before starting, you must have installed.
 
 - [Git](https://git-scm.com)
 - [Node.js](https://nodejs.org/en/)
 - [VSCode](https://code.visualstudio.com/) or similar
+- [MongoDb](https://www.mongodb.com/) (local installation or docker)
+- [Insomnia](https://insomnia.rest/download) or [Postman](https://www.postman.com/)
 
 ### 🛠 Technologies
 
@@ -33,9 +38,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Node.js](https://nodejs.org/en/)
 - [TypeScript](https://www.typescriptlang.org/)
-- Express
-- Mongoose
-- Nodemailer
+- [Express](https://expressjs.com/)
+- [Mongoose](https://mongoosejs.com/)
+- [Nodemailer](https://nodemailer.com/about/)
 
 # Architecture
 

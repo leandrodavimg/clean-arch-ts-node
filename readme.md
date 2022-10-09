@@ -51,7 +51,7 @@ As I believe that nothing can be done alone :)
 
 ---
 
-<a href="https://blog.rocketseat.com.br/author/thiago/">
+<a href="https://github.com/leandrodavimg/">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/3165569?s=400&u=6fb862d18df54e6d245108494da5814cd32e4a9a&v=4" width="100px;" alt=""/>
  <br />
  <sub><b>Leandro Freitas</b></sub></a>

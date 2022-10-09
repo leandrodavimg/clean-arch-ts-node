@@ -16,6 +16,7 @@
 - ✅ Using the in-memory database 💾
 - ✅ Using MongoDb with mongoose
 - ✅ Create a new user
+- ✅ Validate if the email is real
 - ✅ Find user by email
 - ✅ Send mailtrap (smtp)
 - 🔲 Login User
@@ -34,7 +35,7 @@ Before starting, you must have installed.
 
 ### 🛠 Technologies
 
-As seguintes ferramentas foram usadas na construção do projeto:
+As I believe that nothing can be done alone :)
 
 - [Node.js](https://nodejs.org/en/)
 - [TypeScript](https://www.typescriptlang.org/)

@@ -11,7 +11,8 @@ export class UserBD implements IUserRepository {
   }
 
   async save(user: User): Promise<User> {
-    const client = new UserModel(user)
+    delete user.props 
+    const client = new UserModel(user) // ! nao esta gravando pq esta passando propriedades privadas aqui
     await client.save()
     return user
   }

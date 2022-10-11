@@ -28,7 +28,7 @@
 - 🔲 Using TypeORM (MYSQL or POSTGRE)
 - 🔲 Configure swagger
 
-## Requirements
+### Requirements
 
 Before starting, you must have installed.
 
@@ -47,10 +47,15 @@ As I believe that nothing can be done alone :)
 - [Express](https://expressjs.com/)
 - [Mongoose](https://mongoosejs.com/)
 - [Nodemailer](https://nodemailer.com/about/)
+- [Vitest](https://vitest.dev/)
 
-# Architecture
+## Architecture
 
 <p>🙈 I'm still writing</p>
+
+## Introduction Test
+
+For this application I am using [VITEST](https://vitest.dev/)
 
 ### Author
 

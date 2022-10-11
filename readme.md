@@ -11,6 +11,8 @@
  <a href="#Author">Author</a>
 </p>
 
+[About clean Arch](https://github.com/leandrodavimg/clean-code-javascript)
+
 ### Features
 
 - ✅ Using the in-memory database 💾
@@ -21,7 +23,10 @@
 - ✅ Send mailtrap (smtp)
 - 🔲 Login User
 - 🔲 Log out
+- 🔲 Add JWT
+- 🔲 Show me in new route
 - 🔲 Using TypeORM (MYSQL or POSTGRE)
+- 🔲 Configure swagger
 
 ## Requirements
 

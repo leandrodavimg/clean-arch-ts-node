@@ -1,4 +1,4 @@
-import { User } from "../../entities/User";
+import { IUserPros, User } from "../../entities/User";
 import { IUserRepository } from "../../repositories/user-repository";
 import { ICreateUserRequestDTO } from "./create-user-dto";
 import { IMailProvider } from '../../providers/mail-provider'
@@ -14,28 +14,26 @@ export class CreateUserUseCase {
     private validator: IValidator
   ) { }
 
-  async execute(data: ICreateUserRequestDTO): Promise<User> {
+  async execute(data: ICreateUserRequestDTO): Promise<IUserPros> {
 
-    // valid e-mail
-    if (!this.validator.email(data.email)) {
-      throw new Error('E-mail is not valid.')
-    }
+    // (x) instance the new user
+    // (x) validates if the email is email
+    // ! () here already applies the TDD
+    const user = new User(data, this.validator)
 
-    const userAlreadyExists = await this.usersRepository.findByEmail(data.email)
+    // validates if the email is registered
+    const userAlreadyExists = await this.usersRepository.findByEmail(user.email)
 
     if (userAlreadyExists) {
       throw new Error('User already exists.')
     }
 
-    // Instancia o novo usuário
-    const user = new User(data)
-
     // Encripta o password
     const newPassword = await this.encriptPass.hash(user.password)
-    user.password = newPassword
+    user.password = newPassword // como estou alterando o valor tive que colocar o set na class
 
     // Grava o usuário no banco de dados
-    const userData = await this.usersRepository.save(user)
+    const userData = await this.usersRepository.save(user.props)
 
     await this.mailProvider.sendMail({
       to: {

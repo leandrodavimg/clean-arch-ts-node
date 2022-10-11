@@ -4,7 +4,8 @@ import { CreateUserUseCase } from "./create-user-use-case";
 import { BcryptEncode } from '../../infra/providers/encript/bcrypt'
 import { Validator } from '../../infra/providers/validator/validator'
 
-// import { UserBD } from "../../infra/repositories/memo-db/user/user-db"; // Bd memo fake
+// Data bases
+// import { UserBD } from "../../infra/repositories/memo-db/user/user-memo"; // Bd memo fake
 import { UserBD } from '../../infra/repositories/mongoose/user/user-mongoose'
 
 const postgreFakeRepository = new UserBD()

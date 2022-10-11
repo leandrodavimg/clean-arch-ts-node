@@ -1,4 +1,4 @@
-import { IUserPros } from "../../../../entities/User";
+import { IUserPros } from "../../../../entities/user/User";
 import { IUserRepository } from "../../../../repositories/user-repository";
 import UserModel from './schema'
 

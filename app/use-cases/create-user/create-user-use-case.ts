@@ -1,4 +1,4 @@
-import { IUserPros, User } from "../../entities/User";
+import { IUserPros, User } from "../../entities/user/User";
 import { IUserRepository } from "../../repositories/user-repository";
 import { ICreateUserRequestDTO } from "./create-user-dto";
 import { IMailProvider } from '../../providers/mail-provider'

@@ -1,4 +1,4 @@
-import { User, IUserPros } from "../../../../entities/User";
+import { User, IUserPros } from "../../../../entities/user/User";
 import { IUserRepository } from "../../../../repositories/user-repository";
 
 export class UserBD implements IUserRepository {

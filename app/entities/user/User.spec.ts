@@ -1,4 +1,4 @@
-import { expect, test } from 'vitest'
+import { expect, test, vi } from 'vitest'
 
 // working my test
 import { User } from './User'
@@ -27,3 +27,16 @@ test('Should cannot create user without name', () => {
 
   expect(() => { return new User(user, validator) }).toThrow('Name is not valid')
 })
+
+// test('Should cannat teste get and set', () => {
+//   const validator = new Validator()
+//   const user = new User({
+//     name: 'Leandro Freitas',
+//     email: 'emailvalid@email.com',
+//     password: '123123'
+//   }, validator)
+
+
+//   const spy = vi.spyOn(user, )
+  
+// })

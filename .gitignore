@@ -1,8 +1,11 @@
 /node_modules
 /lib
 /coverage
+/**/migrations/*
+
+
 
 *.lock
-# readme.md
 sample.md
 .env
+

@@ -7,8 +7,8 @@ import { CreateJwt } from "../../infra/providers/security/jwt";
 
 // Data bases
 // import { UserBD } from "../../infra/repositories/memo-db/user/user-memo"; // Bd memo fake
-// import { UserBD } from '../../infra/repositories/mongoose/user/user-mongoose'
-import { UserBD } from '../../infra/repositories/typeorm/repositories/user/create-user'
+import { UserBD } from '../../infra/repositories/mongoose/user/user-mongoose'
+// import { UserBD } from '../../infra/repositories/typeorm/repositories/user/create-user'
 
 const dataBD = new UserBD()
 const mailtrapMailProvider = new SendMailMailtrap()

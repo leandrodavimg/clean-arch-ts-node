@@ -1,7 +1,7 @@
 {
   "name": "solid-node-ts",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app/server.ts",
   "license": "MIT",
   "scripts": {
     "dev": "tsnd --transpile-only --respawn --ignore-watch node_modules app/server.ts",

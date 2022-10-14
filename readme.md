@@ -25,7 +25,7 @@
 - 🔲 Log out
 - 🔲 Add JWT
 - 🔲 Show me in new route
-- 🔲 Using TypeORM (MYSQL or POSTGRE)
+- ✅ Using TypeORM (MYSQL or POSTGRE)
 - 🔲 Configure swagger
 
 ### Requirements

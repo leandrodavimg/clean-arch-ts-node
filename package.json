@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "tsnd --transpile-only --respawn --ignore-watch node_modules app/server.ts",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "migration:generate": "typeorm-ts-node-commonjs -d ./app/config/connection/typeorm.ts migration:generate ./app/infra/repositories/typeorm/migrations/default",
+    "migration:run": "typeorm-ts-node-commonjs -d ./app/config/connection/typeorm.ts migration:run"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
@@ -15,6 +17,9 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.6.5",
     "nodemailer": "^6.8.0",
+    "pg": "^8.8.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.10",
     "uuid": "^9.0.0",
     "uuidv4": "^6.2.13",
     "validator": "^13.7.0"

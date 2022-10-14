@@ -49,6 +49,28 @@ As I believe that nothing can be done alone :)
 - [Nodemailer](https://nodemailer.com/about/)
 - [Vitest](https://vitest.dev/)
 
+## TypeOrm
+
+One of the options I configured as ORM was the famous typeorm.
+
+In order for you to use typeorm's features, configure the project's setup following the guidelines on the official website.
+
+In package.json I configured the commands to generate and run the migrations in your database.
+
+_Generate_
+
+```bash
+yarn migration:generation # To generate all migrations based on the entities
+```
+
+_Run_
+
+```bash
+yarn migration:run # This command create the tables in the database
+```
+
+## Changing connections
+
 ## Architecture
 
 <p>🙈 I'm still writing</p>

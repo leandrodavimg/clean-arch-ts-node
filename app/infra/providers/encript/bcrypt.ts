@@ -7,11 +7,12 @@ export class BcryptEncode implements IBcrypt {
     
   }
   
-  compare(password: string, user: User): Promise<boolean> {
-    throw new Error("Method not implemented.");
+  async compare(password: string, user: User): Promise<boolean> {
+    const validate = bcrypt.compare(password, user.password)
+    return validate
   }
 
-  async hash(password: string): Promise<string> {
+  hash(password: string): string {
     const pass = bcrypt.hashSync(password, 10) 
     return pass
   }

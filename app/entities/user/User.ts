@@ -4,6 +4,8 @@ export class User {
   public name: string
   public email: string
   public password: string
+  public confirmed: boolean
+  public active: boolean
 
   constructor(props: Omit<User, 'id'>, id?: string) {
 

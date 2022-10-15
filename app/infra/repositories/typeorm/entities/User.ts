@@ -8,9 +8,18 @@ export class User {
   @Column('text')
   name: string
 
-  @Column('text')
+  @Column({ type: 'text', unique: true })
   email: string
 
   @Column('text')
   password: string
+
+  @Column({ type: 'boolean', default: false })
+  confirmed: boolean
+
+  @Column({ nullable: false, default: 'NOW()' })
+  created_at: Date
+
+  @Column({ nullable: false, default: 'NOW()' })
+  updated_at: Date
 }

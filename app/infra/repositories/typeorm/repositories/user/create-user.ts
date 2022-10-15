@@ -1,6 +1,6 @@
 import { Repository } from "typeorm";
 import { AppDataSource } from "../../../../../config/connection/typeorm";
-import { IUserPros } from "../../../../../entities/user/User";
+import { User as IUser } from "../../../../../entities/user/User";
 import { IUserRepository } from "../../../../../repositories/user-repository";
 import { User } from "../../entities/User";
 
@@ -11,14 +11,8 @@ export class UserBD implements IUserRepository {
   constructor() {
     this.repository = AppDataSource.getRepository(User)
   }
-  async save(user: IUserPros): Promise<IUserPros> {
-    const newUser: User = {
-      name: user.name,
-      id: user.id,
-      email: user.email,
-      password: user.password
-    }
-    const createUser = this.repository.create(newUser)
+  async save(user: IUser): Promise<IUser> {
+    const createUser = this.repository.create(user)
     await this.repository.save(createUser)
     return createUser
   }

@@ -6,7 +6,7 @@ import { Validator } from '../../infra/providers/validator/validator'
 
 test('Should cannot create user without email or with invalid emaila', () => {
   const user = {
-    name: 'Leandro Freitas',
+    name: 'Name User',
     email: 'invalid-email',
     password: '123123'
   }
@@ -28,15 +28,15 @@ test('Should cannot create user without name', () => {
   expect(() => { return new User(user, validator) }).toThrow('Name is not valid')
 })
 
-// test('Should cannat teste get and set', () => {
-//   const validator = new Validator()
-//   const user = new User({
-//     name: 'Leandro Freitas',
-//     email: 'emailvalid@email.com',
-//     password: '123123'
-//   }, validator)
+test('Should cannot create user whitout password', () => {
+  const user = {
+    name: 'Name user',
+    email: 'emailvalid@email.com',
+    password: ''
+  }
 
+  const validator = new Validator()
 
-//   const spy = vi.spyOn(user, )
-  
-// })
+  expect(() => { return new User(user, validator) }).toThrow('Password is required')
+})
+

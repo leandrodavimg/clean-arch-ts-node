@@ -8,4 +8,8 @@ export class Validator implements IValidator {
     return emailValid
   }
 
+  isEmpty(value: string): boolean {
+      return validator.isEmpty(value)
+  }
+
 }

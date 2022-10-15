@@ -4,7 +4,7 @@ import { IJwt } from '../../../providers/jwt'
 
 export class CreateJwt implements IJwt {
   sign(user: User): string {
-    const token = jwt.sign(user, process.env.KEY, {expiresIn: '60m'}) 
+    const token = jwt.sign({id: user.id}, process.env.KEY, {expiresIn: '12h'}) 
     return token
   }
 

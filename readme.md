@@ -21,10 +21,10 @@
 - ✅ Validate if the email is real
 - ✅ Find user by email
 - ✅ Send mailtrap (smtp)
-- 🔲 Login User
+- ✅ Login User
 - 🔲 Log out
-- 🔲 Add JWT
-- 🔲 Show me in new route
+- ✅ Add JWT
+- ✅ Show me in new route
 - ✅ Using TypeORM (MYSQL or POSTGRE)
 - 🔲 Configure swagger
 

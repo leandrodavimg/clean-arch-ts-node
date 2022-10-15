@@ -1,11 +1,8 @@
 import { Repository } from "typeorm";
-import { AppDataSource } from "../../../../../config/connection/typeorm";
-import { User as IUser } from "../../../../../entities/user/User";
-import { IUserRepository } from "../../../../../repositories/user-repository";
+import { AppDataSource } from "@config/connection/typeorm";
+import { User as IUser } from "@entities/user/User";
+import { IUserRepository } from "@repositories/user-repository";
 import { User } from "../../entities/User";
-
-const teste = AppDataSource.getRepository(User)
-
 export class UserBD implements IUserRepository {
   private repository: Repository<User>
   constructor() {
@@ -18,6 +15,7 @@ export class UserBD implements IUserRepository {
   }
 
   async findByEmail(emial: string): Promise<boolean> {
-      return false
+      const user = await this.repository.findOneBy({email: emial})
+      return user ? true : false
   }
 }

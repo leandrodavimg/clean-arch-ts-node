@@ -17,6 +17,9 @@ export class User {
   @Column({ type: 'boolean', default: false })
   confirmed: boolean
 
+  @Column({ type: 'boolean', default: true })
+  active: boolean
+
   @Column({ nullable: false, default: 'NOW()' })
   created_at: Date
 

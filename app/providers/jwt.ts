@@ -3,9 +3,9 @@
 //   key: string,
 
 // }
-import { IUserPros } from "../entities/user/User"
+import { User } from "../entities/user/User"
 
 export interface IJwt {
-  sign(user: IUserPros): string
+  sign(user: User): string
   verify(token: string): any
 }

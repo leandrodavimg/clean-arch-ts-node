@@ -1,9 +1,9 @@
 import jwt from 'jsonwebtoken'
-import { IUserPros } from '../../../entities/user/User'
+import { User } from '../../../entities/user/User'
 import { IJwt } from '../../../providers/jwt'
 
 export class CreateJwt implements IJwt {
-  sign(user: IUserPros): string {
+  sign(user: User): string {
     const token = jwt.sign(user, process.env.KEY, {expiresIn: '60m'}) 
     return token
   }

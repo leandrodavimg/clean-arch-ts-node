@@ -20,7 +20,8 @@
       "@entities/*": ["./app/entities/*"],
       "@repositories/*": ["./app/repositories/*"]
     },
-    "types": ["node"]
+    "types": ["node"],
+    "typeRoots": ["./app/@types"]
   },
   "include": ["app/**/*ts"],
   "exclude": ["node_modules"]

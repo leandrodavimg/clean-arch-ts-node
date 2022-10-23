@@ -9,7 +9,11 @@ export class CreateJwt implements IJwt {
   }
 
   verify(token: string) {
-    const payload = jwt.verify(token, process.env.KEY)
-    return payload
+    try {
+      const payload = jwt.verify(token, process.env.KEY)
+      return payload
+    } catch {
+      return null
+    }
   }
 }

@@ -19,7 +19,13 @@ export class UserAuthMiddleware {
 
     const token = authorization.split(' ')[1]
 
-    const { id } = this.jwt.verify(token)
+    const myToken = this.jwt.verify(token)
+    if (!myToken) {
+      // throw new Error('Sem id no token')
+      res.status(403).json({message: 'token invalido'})
+    }
+
+    const { id } = myToken
 
     const user = await this.userRepository.findById(id)
 

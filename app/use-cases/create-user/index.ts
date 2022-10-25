@@ -3,6 +3,7 @@ import { CreateuserController } from "./create-user-controller";
 import { CreateUserUseCase } from "./create-user-use-case";
 import { BcryptEncode } from '@infra/providers/encript/bcrypt'
 import { Validator } from '@infra/providers/validator/validator'
+import { ErroHttp } from '../../infra/providers/exceptions'
 
 
 // Data bases
@@ -14,9 +15,10 @@ const dataBD = new UserBD()
 const mailtrapMailProvider = new SendMailMailtrap()
 const bcrypt = new BcryptEncode()
 const validator = new Validator()
+const erroHttp = new ErroHttp()
 
 const createUserUseCase = new CreateUserUseCase(
-  dataBD, mailtrapMailProvider, bcrypt, validator
+  dataBD, mailtrapMailProvider, bcrypt, validator, erroHttp
 )
 
 const createUserController = new CreateuserController(

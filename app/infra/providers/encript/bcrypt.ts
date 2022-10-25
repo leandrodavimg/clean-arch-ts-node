@@ -1,6 +1,6 @@
-import { IBcrypt } from "../../../providers/encript-provider";
+import { IBcrypt } from "@providers/encript-provider";
 import bcrypt from 'bcrypt'
-import { User } from "../../../entities/user/User";
+import { User } from "@entities/user/User";
 
 export class BcryptEncode implements IBcrypt {
   constructor() {

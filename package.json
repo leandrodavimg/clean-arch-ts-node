@@ -4,11 +4,11 @@
   "main": "app/server.ts",
   "license": "MIT",
   "scripts": {
-    "dev": "tsnd -r tsconfig-paths/register --transpile-only --respawn --ignore-watch node_modules app/server.ts",
+    "dev": "tsnd -r tsconfig-paths/register --transpile-only --respawn --ignore-watch node_modules src/main/server/server.ts",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "migration:generate": "typeorm-ts-node-commonjs -d ./app/config/connection/typeorm.ts migration:generate ./app/infra/repositories/typeorm/migrations/default",
-    "migration:run": "typeorm-ts-node-commonjs -d ./app/config/connection/typeorm.ts migration:run",
+    "migration:generate": "typeorm-ts-node-commonjs -d ./src/config/connection/typeorm.ts migration:generate ./src/infra/repositories/typeorm/migrations/default",
+    "migration:run": "typeorm-ts-node-commonjs -d ./src/config/connection/typeorm.ts migration:run",
     "build:watch": "rimraf dist && tsc -p rimraf.json -w"
   },
   "dependencies": {

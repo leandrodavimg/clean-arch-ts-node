@@ -19,7 +19,8 @@
       "@infra/*": ["./app/infra/*"],
       "@config/*": ["./app/config/*"],
       "@entities/*": ["./app/entities/*"],
-      "@repositories/*": ["./app/repositories/*"]
+      "@repositories/*": ["./app/repositories/*"],
+      "@providers/*": ["./app/providers/*"]
     },
     "types": ["node"],
     "typeRoots": ["./app/@types"]

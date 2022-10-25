@@ -76,7 +76,11 @@ yarn migration:run # This command create the tables in the database
 
 Aqui vou explicar como você pode utilizar o swagger nesta apicação.
 
-## Changing connections
+## Running The Application
+
+## Debugging
+
+## Changing Connections
 
 ## Architecture
 

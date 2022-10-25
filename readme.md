@@ -26,7 +26,10 @@
 - ✅ Add JWT
 - ✅ Show me in new route
 - ✅ Using TypeORM (MYSQL or POSTGRE)
-- 🔲 Configure swagger
+- ✅ Configure swagger
+- 🔲 Error middleware
+- 🔲 Refactor the code :)
+- 🔲 Apply test
 
 ### Requirements
 

@@ -8,7 +8,8 @@
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "migration:generate": "typeorm-ts-node-commonjs -d ./app/config/connection/typeorm.ts migration:generate ./app/infra/repositories/typeorm/migrations/default",
-    "migration:run": "typeorm-ts-node-commonjs -d ./app/config/connection/typeorm.ts migration:run"
+    "migration:run": "typeorm-ts-node-commonjs -d ./app/config/connection/typeorm.ts migration:run",
+    "build:watch": "rimraf dist && tsc -p rimraf.json -w"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
@@ -34,6 +35,7 @@
     "@types/swagger-ui-express": "^4.1.3",
     "@types/validator": "^13.7.7",
     "@vitest/coverage-istanbul": "^0.24.1",
+    "rimraf": "^3.0.2",
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "^4.1.0",
     "typescript": "^4.8.4",

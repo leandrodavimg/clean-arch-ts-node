@@ -27,7 +27,7 @@
 - ✅ Show me in new route
 - ✅ Using TypeORM (MYSQL or POSTGRE)
 - ✅ Configure swagger
-- 🔲 Error middleware
+- ✅ ~~Error middleware~~ Error Handling
 - 🔲 Refactor the code :)
 - 🔲 Apply test
 

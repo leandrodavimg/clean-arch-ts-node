@@ -14,28 +14,29 @@ export class UserAuthMiddleware {
     const { authorization } = req.headers
 
     if (!authorization) {
-      throw new Error('Not authorized')
+      res.status(400).json({ message: 'Not authorized' })
+      return; //! That's not the best solution.
     }
 
     const token = authorization.split(' ')[1]
 
     const myToken = this.jwt.verify(token)
     if (!myToken) {
-      // throw new Error('Sem id no token')
-      res.status(403).json({message: 'token invalido'})
+      res.status(400).json({ message: '42: Unexpected error.' })
+      return; //! That's not the best solution.
     }
 
     const { id } = myToken
-
     const user = await this.userRepository.findById(id)
-
     if (!user.active) {
-      throw new Error('User is not active')
+      res.status(400).json({ message: '42: Unexpected error.' })
+      return; //! That's not the best solution.
     }
-
     const {password: _, ...userPayload} = user
-
     req.user = userPayload
+    
+
+    
 
     next()
 

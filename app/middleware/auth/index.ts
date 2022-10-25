@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express'
 import { CreateJwt } from '../../infra/providers/security/jwt'
 import { UserBD } from '../../infra/repositories/typeorm/repositories/user/create-user'
-import { UserAuthMiddleware } from './user'
+import { UserAuthMiddleware } from './auth-use-case'
 
 const jwt = new CreateJwt()
 const userBD = new UserBD()

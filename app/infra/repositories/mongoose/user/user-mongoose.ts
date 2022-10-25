@@ -12,7 +12,6 @@ export class UserBD implements IUserRepository {
   }
 
   async save(user: User): Promise<User> {
-    console.log(user)
     const client = new UserModel(user)
     await client.save()
     return user

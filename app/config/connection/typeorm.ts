@@ -2,8 +2,6 @@ import "reflect-metadata"
 import "dotenv/config"
 import { DataSource } from "typeorm"
 
-console.log('TYPEORM')
-
 const port = process.env.TYPEORM_PORT as unknown as number | undefined
 
 export const AppDataSource = new DataSource({

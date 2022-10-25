@@ -22,13 +22,13 @@
 - ✅ Find user by email
 - ✅ Send mailtrap (smtp)
 - ✅ Login User
-- 🔲 Log out
 - ✅ Add JWT
 - ✅ Show me in new route
 - ✅ Using TypeORM (MYSQL or POSTGRE)
 - ✅ Configure swagger
 - ✅ ~~Error middleware~~ Error Handling
-- 🔲 Refactor the code :)
+- ✅ Refactor the code :)
+- 🔲 Implement cors
 - 🔲 Apply test
 
 ### Requirements

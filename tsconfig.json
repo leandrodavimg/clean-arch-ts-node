@@ -25,7 +25,7 @@
       "@use-cases/*": ["./src/use-cases/*"]
     },
     "types": ["node"],
-    "typeRoots": ["./src/@types"]
+    "typeRoots": ["./src/config/@types"]
   },
   "include": ["src/**/*ts"],
   "exclude": ["node_modules"]
